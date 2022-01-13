@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.2",
+    "dotenv": "^11.0.0",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.13.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "challenge14",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mwin1201/Tech-Blog-Dinosaur-Scales.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mwin1201/Tech-Blog-Dinosaur-Scales/issues"
+  },
+  "homepage": "https://github.com/mwin1201/Tech-Blog-Dinosaur-Scales#readme"
+}
