@@ -4,7 +4,7 @@ const { User, Comment, Post } = require('../../models');
 // get all users
 router.get('/', (req, res) => {
     User.findAll({
-        attributes: ['username']
+        attributes: { exclude: ['password'] }
     })
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {
@@ -47,3 +47,5 @@ router.get('/:id', (req, res) => {
         res.status(500).json(err);
     });
 });
+
+module.exports = router;
