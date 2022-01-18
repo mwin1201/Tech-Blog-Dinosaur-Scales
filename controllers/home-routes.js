@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
 const sequelize = require('../config/connection');
+const e = require('express');
 
 // get all posts for the homepage
 router.get('/', (req, res) => {
@@ -62,7 +63,6 @@ router.get('/post/:id', (req, res) => {
             res.status(404).json({ message: 'No Post found with this id' });
             return;
         }
-        res.json(dbPostData);
 
         const post = dbPostData.get({ plain: true });
 
@@ -72,6 +72,14 @@ router.get('/post/:id', (req, res) => {
         console.log(err);
         res.status(500).json(err);
     });
+});
+
+router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    res.render('login');
 });
 
 module.exports = router;
