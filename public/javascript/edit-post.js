@@ -21,4 +21,4 @@ async function editPostHandler(event) {
     }
 };
 
-document.querySelector('.edit-link').addEventListener('submit', editPostHandler);
+document.querySelector('.edit-post-form').addEventListener('submit', editPostHandler);
